@@ -5,6 +5,7 @@ clusterGroup:
     - kuadrant-system
     - istio-system
     - vault
+    - open-cluster-management 
 
   subscriptions:
     acm:
@@ -64,6 +65,14 @@ clusterGroup:
 
   imperative: {}
   managedClusterGroups:
+    development:
+      name: development
+      acmlabels:
+        - name: clusterGroup
+          value: rhcl-development
+      helmOverrides:
+        - name: clusterGroup.isHubCluster
+          value: false
     exampleRegion:
       name: group-one
       acmlabels:
