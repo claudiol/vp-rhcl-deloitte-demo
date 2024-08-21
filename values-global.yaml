@@ -5,6 +5,20 @@ global:
     useCSV: false
     syncPolicy: Automatic
     installPlanApproval: Automatic
+rhcldemo:
+  hostedZoneId: 
+  rootDomainId:
+  gatewayNS:
+  gatewayName:
+  clusterIssuerName:
+  email:
+  camelNS:
+  camelRouteName:
+  openIdHost:
+  openIdReal:
+  openIdClient:
+  openIdTokenURL:
+
 main:
   clusterGroupName: hub
   multiSourceConfig:
