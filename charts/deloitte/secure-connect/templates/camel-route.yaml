@@ -1,0 +1,45 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: HTTPRoute
+metadata:
+  name: "${CAMEL_ROUTE_NAME}"
+  namespace: "${CAMEL_NS}"
+  labels:
+    deployment: rhcl-demo
+    service: rhcl-demo
+spec:
+  parentRefs:
+  - name: "{{ .Values.secure.config.gatewayName }}"
+    namespace: "{{ .Values.secure.config.gatewayNS }}"
+  hostnames:
+  - "rhcl-demo.{{ .Values.secure.config.rootDomainName }}"
+  rules:
+  - backendRefs:
+    - name: rhcl-demo
+      namespace: "{{ .Values.secure.config.camelNS }}"
+      port: 80
+    matches:
+    - method: GET
+      path:
+        type: PathPrefix
+        value: /api/person
+  - backendRefs:
+    - name: rhcl-demo
+      namespace: "{{ .Values.secure.config.camelNS }}"
+      port: 80
+    matches:
+    - method: POST
+      path:
+        type: Exact
+        value: /api/person
+  - backendRefs:
+    - name: rhcl-demo
+      namespace: "{{ .Values.secure.config.camelNS }}"
+      port: 80
+    matches:
+    - method: PUT
+      path:
+        type: Exact
+        value: /api/person
+status:
+  parents: null
+

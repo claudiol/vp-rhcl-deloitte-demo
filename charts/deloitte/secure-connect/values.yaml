@@ -1,0 +1,10 @@
+secure:
+  config:
+    hostedZoneId:
+    gatewayNS:
+    rootDomainId:
+    awsRegion:
+    server:
+    clusterIssuerName: lala
+    camelNS: 
+    ## server: https://acme-staging-v02.api.letsencrypt.org/directory

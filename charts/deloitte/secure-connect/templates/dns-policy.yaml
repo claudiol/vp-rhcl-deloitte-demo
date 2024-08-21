@@ -1,0 +1,17 @@
+---
+apiVersion: kuadrant.io/v1alpha1
+kind: DNSPolicy
+metadata:
+  name: {{ .Values.secure.config.gatewayName }}-dnspolicy
+  namespace: {{ .Values.secure.config.gatewayNS }}
+spec:
+  routingStrategy: loadbalanced
+  loadBalancing:
+    geo: 
+      defaultGeo: US 
+    weighted:
+      defaultWeight: 120 
+  targetRef:
+    name: {{ .Values.secure.config.gatewayName }}  
+    group: gateway.networking.k8s.io
+    kind: Gateway

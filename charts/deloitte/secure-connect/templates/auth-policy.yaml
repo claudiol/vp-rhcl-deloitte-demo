@@ -1,0 +1,17 @@
+---
+apiVersion: kuadrant.io/v1beta2
+kind: AuthPolicy
+metadata:
+  name: {{ .Values.secure.config.gatewayName }}-auth 
+  namespace: ${GATEWAY_NS}
+spec:
+  targetRef:
+    group: gateway.networking.k8s.io
+    kind: Gateway
+    name: {{ .Values.secure.config.gatewayName }} 
+  defaults:
+    rules:
+      authorization:
+        "deny":
+          opa:
+            rego: "allow = false"

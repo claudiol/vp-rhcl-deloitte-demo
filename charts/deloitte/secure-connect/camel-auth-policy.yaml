@@ -1,0 +1,25 @@
+apiVersion: kuadrant.io/v1beta2
+kind: AuthPolicy
+metadata:
+  name: "{{ .Values.secure.config.camelRouteName }}"
+  namespace: "{{ .Values.secure.config.camelNS }}"
+spec:
+  targetRef:
+    group: gateway.networking.k8s.io
+    kind: HTTPRoute
+    name: "{{ .Values.secure.config.camelRouteName }}"
+  routeSelectors:
+  - matches:
+    - method: POST
+      path:
+        type: Exact
+        value: /api/person
+    - method: PUT
+      path:
+        type: Exact
+        value: /api/person
+  rules:
+    authentication:
+      keycloak-users:
+        jwt:
+          issuerUrl: "{{ .Values.secure.config.openIdSSLIssuer }}"
