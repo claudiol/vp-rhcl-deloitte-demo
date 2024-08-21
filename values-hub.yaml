@@ -68,7 +68,7 @@ clusterGroup:
       name: catalog-source
       namespace: kuadrant-system
       project: hub
-      path: charts/deloitte/catalog-source
+      path: charts/deloitte/catalog-source-config
 
 
   imperative: {}
