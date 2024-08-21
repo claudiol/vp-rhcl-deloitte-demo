@@ -1,0 +1,11 @@
+apiVersion: operator.istio.io/v1alpha1
+kind: Istio
+metadata:
+  name: default
+spec:
+  version: {{ .Values.istio.version }}
+  namespace: {{ .Values.istio.namespace }}
+  # Disable autoscaling to reduce dev resources
+  values:
+    pilot:
+      autoscaleEnabled: {{ .Values.istio.autoscale }}

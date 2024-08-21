@@ -1,0 +1,6 @@
+kuadrant:
+  imageName: quay.io/kuadrant/kuadrant-operator-catalog:v0.8.0
+  namespace: kuadrant-system
+  updateStrategy:
+    registryPoll:
+      interval: 45m

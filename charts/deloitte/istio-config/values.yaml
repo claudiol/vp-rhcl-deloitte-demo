@@ -1,0 +1,4 @@
+istio:
+  namespace: istio-system
+  version: v1.21.0
+  autoscale: false
