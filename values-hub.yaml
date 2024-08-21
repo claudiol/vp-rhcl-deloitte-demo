@@ -6,6 +6,7 @@ clusterGroup:
     - istio-system
     - vault
     - open-cluster-management 
+    - golang-external-secrets
 
   subscriptions:
     acm:
