@@ -63,6 +63,13 @@ clusterGroup:
       project: hub
       path: charts/deloitte/istio-config
 
+    catalog-source:
+      name: catalog-source
+      namespace: kuadrant-system
+      project: hub
+      path: charts/deloitte/catalog-source
+
+
   imperative: {}
   managedClusterGroups:
     development:
