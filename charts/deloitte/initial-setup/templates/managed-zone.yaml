@@ -5,7 +5,7 @@ metadata:
   namespace: {{ .Values.kuadrant.config.gatewayNS }}
 spec:
   id: {{ .Values.kuadrant.config.hostedZoneID }}
-  domainName: {{ .Values.kuadrant.config.rootDomainId }}
+  domainName: {{ .Values.kuadrant.config.rootDomainName }}
   description: "Kuadrant managed zone"
   dnsProviderSecretRef:
     name: aws-credentials

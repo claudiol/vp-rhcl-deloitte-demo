@@ -13,7 +13,7 @@ spec:
 
       - dns01:
           route53:
-            hostedZoneID: {{ .Values.secure.config.hostedZoneId }}
+            hostedZoneID: {{ .Values.secure.config.hostedZoneID }}
             region: {{ .Values.secure.config.awsRegion }}
             accessKeyIDSecretRef:
               key: aws_access_key_id

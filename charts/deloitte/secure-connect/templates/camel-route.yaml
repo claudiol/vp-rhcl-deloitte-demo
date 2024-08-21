@@ -1,7 +1,7 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: HTTPRoute
 metadata:
-  name: "${CAMEL_ROUTE_NAME}"
+  name: "{{ .Values.secure.config.camelRouteName }} ${CAMEL_ROUTE_NAME}"
   namespace: "${CAMEL_NS}"
   labels:
     deployment: rhcl-demo

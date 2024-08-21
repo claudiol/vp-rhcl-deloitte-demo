@@ -1,9 +1,7 @@
 kuadrant:
   config:
-    namespace: 
-    hostedZoneId: 
-    rootDomainName: 
-    clusterIssuerName:
-    email:
-    server: 
-    ### server: https://acme-staging-v02.api.letsencrypt.org/directory
+    namespace: kuadrant-system 
+    hostedZoneID: Z02129123IKZ9Y7JDYCH5 
+    rootDomainName: rhcl-02.rhvp-workshop.s6ef5y.com 
+    clusterIssuerName: rhcl
+    email: claudiol@redhat.com

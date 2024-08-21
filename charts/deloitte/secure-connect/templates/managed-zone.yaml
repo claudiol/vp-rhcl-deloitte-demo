@@ -5,8 +5,8 @@ metadata:
   name: managedzone
   namespace: {{ .Values.secure.config.gatewayNS }}
 spec:
-  id: {{ .Values.secure.config.hostedZoneId }}
-  domainName: {{ .Values.secure.config.rootDomainId }}
+  id: {{ .Values.secure.config.hostedZoneID }}
+  domainName: {{ .Values.secure.config.rootDomainName }}
   description: "Kuadrant managed zone"
   dnsProviderSecretRef:
     name: aws-credentials

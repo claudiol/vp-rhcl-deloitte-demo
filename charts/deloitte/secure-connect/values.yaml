@@ -1,10 +1,13 @@
 secure:
   config:
-    hostedZoneId:
-    gatewayNS:
-    rootDomainId:
-    awsRegion:
-    server:
-    clusterIssuerName: lala
-    camelNS: 
-    ## server: https://acme-staging-v02.api.letsencrypt.org/directory
+    namespace: kuadrant-system 
+    hostedZoneID: Z02129123IKZ9Y7JDYCH5 
+    rootDomainName: rhcl-02.rhvp-workshop.s6ef5y.com 
+    clusterIssuerName: rhcl
+    gatewayName: external
+    awsRegion: us-east-1
+    email: claudiol@redhat.com
+    gatewayNS: api-gateway
+    clusterIssuerName: lets-encrypt
+    camelNS: camel-test
+    camelRouteName: camel-route

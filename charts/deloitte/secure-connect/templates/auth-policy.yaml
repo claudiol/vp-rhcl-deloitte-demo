@@ -3,7 +3,7 @@ apiVersion: kuadrant.io/v1beta2
 kind: AuthPolicy
 metadata:
   name: {{ .Values.secure.config.gatewayName }}-auth 
-  namespace: ${GATEWAY_NS}
+  namespace: {{ .Values.secure.config.gatewayNS }}
 spec:
   targetRef:
     group: gateway.networking.k8s.io
