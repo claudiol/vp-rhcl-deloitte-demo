@@ -76,12 +76,6 @@ clusterGroup:
       project: hub
       path: charts/deloitte/initial-setup
 
-    istio-config:
-      name: istio-config
-      namespace: kuadrant-system
-      project: hub
-      path: charts/deloitte/istio-config
-      
     secure-connect:
       name: secure-connect
       namespace: kuadrant-system
