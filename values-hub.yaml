@@ -4,6 +4,7 @@ clusterGroup:
   namespaces:
     - kuadrant-system
     - istio-system
+    - vault
 
   subscriptions:
     acm:
