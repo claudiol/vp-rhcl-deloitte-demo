@@ -14,7 +14,7 @@ clusterGroup:
 
     sailoperator:
       name: sailoperator
-      namespace: default
+      namespace: openshift-operators
       source: community-operators
       channel: 3.0-dp1
 
