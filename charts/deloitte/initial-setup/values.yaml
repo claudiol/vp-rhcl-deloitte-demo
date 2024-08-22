@@ -1,6 +1,6 @@
 kuadrant:
   config:
-    namespace: kuadrant-system 
+    namespace: istio-system 
     hostedZoneID: Z02129123IKZ9Y7JDYCH5 
     rootDomainName: rhcl-02.rhvp-workshop.s6ef5y.com 
     clusterIssuerName: rhcl

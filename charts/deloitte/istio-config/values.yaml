@@ -1,4 +1,20 @@
 istio:
+  #namespace: ingress-gateway
   namespace: istio-system
   version: v1.21.0
   autoscale: false
+    # Istio-Sail Configuration
+
+# External Secrets Configuration
+secretStore:
+  name: vault-backend
+  kind: ClusterSecretStore
+
+# Vault secretStore definition
+secretStore:
+  name: vault-backend
+  kind: ClusterSecretStore
+
+# Key and Path of secret provisioned in Vault
+awsCredentials:
+  key: secret/data/hub/awsCredentials
